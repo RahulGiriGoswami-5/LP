@@ -1,99 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ Section</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editorial Brutalist Contact & Footer</title>
+
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for crisp vector icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <section class="faq-section">
-    <div class="faq-inner">
+    <!-- ========================================================= -->
+    <!-- MAIN CONTACT / FOOTER SECTION CONTAINER                   -->
+    <!-- ========================================================= -->
+    <footer class="editorial-footer-section" id="contact-section">
+        <div class="footer-wrapper">
 
-      <div class="faq-heading">
-        <h2 class="faq-heading__ask">YOU ASK,</h2>
-        <h2 class="faq-heading__answer">WE ANSWER!</h2>
-      </div>
+            <!-- ======================================================= -->
+            <!-- TOP LIGHT SECTION: Marquee Headers & Big CONTACT Text   -->
+            <!-- ======================================================= -->
+            <div class="top-light-section">
 
-      <div class="faq-list">
+                <!-- Top Editorial Header Ticker / Sub-headings -->
+                <div class="top-ticker-container">
+                    <div class="ticker-line ticker-line-1">
+                        <span class="ticker-text">is The Key to Meaningful</span>
+                        <!-- 8-Pointed Red Star Accent -->
+                        <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9" />
+                            <polygon points="12,3 18,6 21,12 18,18 12,21 6,18 3,12 6,6" opacity="0.3" />
+                        </svg>
+                        <span class="ticker-text">Web Experiences Creative</span>
+                    </div>
 
-        <div class="faq-card">
-          <button class="faq-card__question" aria-expanded="false">
-            <span>WHAT MAKES OUR PLATFORM SPECIAL?</span>
-            <span class="faq-card__icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-card__body">
-            <div class="faq-card__answer">
-              Our platform combines cutting-edge technology with an intuitive interface, making it uniquely powerful yet simple to use. We prioritize user experience above everything else.
+                    <div class="ticker-line ticker-line-2">
+                        <span class="ticker-text">Full-stack Collaboration Is The Key To Web Development</span>
+                        <!-- 8-Pointed Red Star Accent -->
+                        <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9" />
+                            <polygon points="12,3 18,6 21,12 18,18 12,21 6,18 3,12 6,6" opacity="0.3" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Oversized CONTACT Typography with Red Sun Backdrop -->
+                <div class="hero-contact-stage">
+                    <!-- Red Sun Circle placed behind the 'ACT' portion -->
+                    <div class="red-sun-circle" aria-hidden="true"></div>
+
+                    <!-- Editable Huge CONTACT Text -->
+                    <h1 class="oversized-contact-title">CONTACT</h1>
+                </div>
+
             </div>
-          </div>
-        </div>
 
-        <div class="faq-card">
-          <button class="faq-card__question" aria-expanded="false">
-            <span>HOW DOES THE PLATFORM WORK?</span>
-            <span class="faq-card__icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-card__body">
-            <div class="faq-card__answer">
-              Simply sign up, choose a plan that suits your needs, and start exploring. Our guided onboarding walks you through every feature so you can hit the ground running.
+            <!-- ======================================================= -->
+            <!-- BOTTOM DARK SECTION: OUR FIRM, Socials, Form, & Nav     -->
+            <!-- ======================================================= -->
+            <div class="bottom-dark-section">
+
+                <!-- Background Monogram Watermark Stamp ("R" Emblem) -->
+                <div class="watermark-monogram" aria-hidden="true">
+                    <div class="monogram-circle">
+                        <span class="monogram-letter">R</span>
+                    </div>
+                </div>
+
+                <!-- Background / Muted "OUR FIRM" Title -->
+                <div class="firm-backdrop-container">
+                    <h2 class="oversized-firm-title">OUR FIRM</h2>
+                </div>
+
+                <!-- Main Content Grid -->
+                <div class="dark-content-grid">
+
+                    <!-- Left Column: Connect & Bio -->
+                    <div class="connect-column">
+                        <h3 class="connect-heading">Connect with me</h3>
+
+                        <!-- Dynamic Social Media Icons -->
+                        <div class="social-links-container">
+                            <!-- X (Twitter) -->
+                            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link-btn"
+                                title="Follow on X / Twitter" aria-label="X (Twitter)">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                            <!-- Facebook -->
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                                class="social-link-btn" title="Connect on Facebook" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                                class="social-link-btn" title="Connect on LinkedIn" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+
+                            <!-- Instagram -->
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                                class="social-link-btn" title="Follow on Instagram" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+
+                        <!-- Bio / Tagline Text -->
+                        <p class="connect-tagline">
+                            I transform innovative ideas into reality through thoughtful design and meaningful
+                        </p>
+                    </div>
+
+                    <!-- Right Column: Newsletter Subscription Form -->
+                    <div class="newsletter-column">
+                        <label for="newsletter-email" class="newsletter-label">Send Your Newsletter</label>
+
+                        <form class="newsletter-form" id="newsletter-form" novalidate>
+                            <div class="input-wrapper">
+                                <input type="email" id="newsletter-email" name="email" class="newsletter-input"
+                                    placeholder="send@gmail.com" required autocomplete="email"
+                                    aria-label="Email address for newsletter">
+                                <button type="submit" class="newsletter-submit-btn" aria-label="Subscribe to newsletter"
+                                    title="Send email">
+                                    <!-- Send / Paper Airplane Icon -->
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            <div class="newsletter-feedback" id="newsletter-feedback" role="alert" aria-live="polite">
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- Navigation Bar Row -->
+                <nav class="footer-navigation" aria-label="Footer Navigation">
+                    <ul class="nav-links-list">
+                        <li><a href="#home" class="nav-link">HOME</a></li>
+                        <li><a href="#about" class="nav-link">ABOUT ME</a></li>
+                        <li><a href="#services" class="nav-link">MY SERVICES</a></li>
+                        <li><a href="#works" class="nav-link">MY WORKS</a></li>
+                        <!-- Working Contact / Message Button -->
+                        <li>
+                            <a href="mailto:sudip.das.ghosh@example.com?subject=Project%20Collaboration%20Inquiry&body=Hi%20Sudip%2C%0A%0AI%20would%20like%20to%20discuss%20a%20project%20collaboration.%0A%0ABest%20regards%2C"
+                                class="nav-link nav-link-contact highlight-contact-btn" id="contact-me-btn"
+                                role="button" title="Send direct email">
+                                CONTACT ME
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Bottom Copyright Row -->
+                <div class="footer-bottom-row">
+                    <p class="copyright-text">
+                        Copyright <span class="copyright-symbol">&copy;</span> <span class="copyright-author">Sudip Das
+                            Ghosh</span> <span class="copyright-years">2025&ndash;2026</span>
+                    </p>
+                </div>
+
             </div>
-          </div>
-        </div>
 
-        <div class="faq-card">
-          <button class="faq-card__question" aria-expanded="false">
-            <span>WHO CAN USE THIS PLATFORM?</span>
-            <span class="faq-card__icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-card__body">
-            <div class="faq-card__answer">
-              Anyone! Whether you're a student, a freelancer, a small business owner, or part of a large enterprise — our platform is designed to scale and adapt to your unique needs.
+        </div>
+    </footer>
+
+    <!-- Contact Modal Popup for Interactive Messaging -->
+    <div class="contact-modal" id="contact-modal" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-labelledby="modal-title">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-card">
+            <button type="button" class="modal-close-btn" id="modal-close-btn"
+                aria-label="Close dialog">&times;</button>
+            <div class="modal-header">
+                <span class="modal-badge">START A CONVERSATION</span>
+                <h3 class="modal-title" id="modal-title">Let's Build Something Meaningful</h3>
+                <p class="modal-subtitle">Direct message to <strong>sudip.das.ghosh@example.com</strong></p>
             </div>
-          </div>
+            <form class="modal-form" id="contact-modal-form">
+                <div class="form-group">
+                    <label for="client-name">Your Name</label>
+                    <input type="text" id="client-name" name="name" placeholder="Alex Morgan" required>
+                </div>
+                <div class="form-group">
+                    <label for="client-email">Your Email</label>
+                    <input type="email" id="client-email" name="email" placeholder="alex@company.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="client-message">Message</label>
+                    <textarea id="client-message" name="message" rows="4"
+                        placeholder="Hello Sudip, I'd love to collaborate on a new digital project..."
+                        required>Hello Sudip, I'd love to collaborate with you on a new project.</textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="modal-submit-btn">
+                        <span>Send Message</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <a href="mailto:sudip.das.ghosh@example.com?subject=Direct%20Inquiry"
+                        class="modal-native-mailto-btn" id="modal-native-mailto">
+                        <i class="fa-regular fa-envelope"></i> Open in Mail Client
+                    </a>
+                </div>
+            </form>
         </div>
-
-        <div class="faq-card">
-          <button class="faq-card__question" aria-expanded="false">
-            <span>IS MY DATA SAFE?</span>
-            <span class="faq-card__icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-card__body">
-            <div class="faq-card__answer">
-              Absolutely. We use industry-standard encryption and follow strict privacy protocols. Your data is never shared with third parties without your explicit consent.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-card">
-          <button class="faq-card__question" aria-expanded="false">
-            <span>CAN I USE IT ON MY PHONE?</span>
-            <span class="faq-card__icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-card__body">
-            <div class="faq-card__answer">
-              Yes! Our platform is fully responsive and works beautifully on phones, tablets, and desktops. You can access all features on the go, anytime and anywhere.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-card">
-          <button class="faq-card__question" aria-expanded="false">
-            <span>HOW CAN I GET STARTED?</span>
-            <span class="faq-card__icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-card__body">
-            <div class="faq-card__answer">
-              Getting started is easy — just click the sign-up button, create your free account, and you'll be ready to explore the platform within minutes. No credit card required.
-            </div>
-          </div>
-        </div>
-
-      </div>
     </div>
-  </section>
 
-  <script src="script.js"></script>
+    <!-- Toast Notification Container -->
+    <div class="toast-notification" id="toast-notification" role="status" aria-live="polite"></div>
+
+    <!-- Main JavaScript File -->
+    <script src="script.js"></script>
 </body>
+
 </html>
