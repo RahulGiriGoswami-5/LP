@@ -1,0 +1,921 @@
+/* =========================================================
+   LOGIN / SIGN IN PAGE
+   ========================================================= */
+
+:root {
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --bg-color: #f3f5f8;
+  --panel-left-bg: #e1e3e6;
+  --panel-right-bg: #ffffff;
+
+  --color-primary: #000000;
+  --color-text-dark: #1b1c1e;
+  --color-text-muted: #8e9297;
+  --color-border: #dbddeb;
+
+  --accent-pink: #f45b7a;
+  --accent-teal: #52c5c9;
+  --accent-blue: #2c8cf4;
+  --accent-light-pink: #ffa9be;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--color-text-dark);
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.login-container {
+  width: 100%;
+  max-width: 1000px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* =========================================================
+   LOGIN CARD
+   ========================================================= */
+
+.login-card {
+  width: 100%;
+
+  background-color: var(--panel-right-bg);
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.04);
+
+  display: grid;
+
+  grid-template-columns: 1.05fr 0.95fr;
+
+  overflow: hidden;
+
+  min-height: 580px;
+}
+
+
+/* =========================================================
+   LEFT CHARACTER PANEL
+   ========================================================= */
+
+.illustration-panel {
+  background-color: var(--panel-left-bg);
+
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 480px;
+}
+
+
+/* =========================================================
+   CHARACTER CONTAINER
+   ========================================================= */
+
+.character-container {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CHARACTER SVG
+   ========================================================= */
+
+.character-svg {
+  position: absolute;
+
+  bottom: 0;
+
+  display: block;
+
+  overflow: visible;
+
+  pointer-events: none;
+
+  transform-origin: bottom center;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   CHARACTER POSITIONS
+   ========================================================= */
+
+/* Large pink dome */
+
+#pink-dome-char {
+  right: -2%;
+  bottom: 0;
+
+  width: 56%;
+
+  aspect-ratio: 240 / 350;
+
+  z-index: 1;
+}
+
+
+/* Trumpet character */
+
+#trumpet-char {
+  left: 6%;
+  bottom: 0;
+
+  width: 44%;
+
+  aspect-ratio: 190 / 380;
+
+  z-index: 2;
+}
+
+
+/* Teal fluffy character */
+
+#teal-fluffy-char {
+  left: 3%;
+  bottom: 0;
+
+  width: 36%;
+
+  aspect-ratio: 140 / 235;
+
+  z-index: 3;
+}
+
+
+/* Blue character */
+
+#blue-circle-char {
+  left: 40%;
+  bottom: 0;
+
+  width: 25%;
+
+  aspect-ratio: 95 / 160;
+
+  z-index: 4;
+}
+
+
+/* =========================================================
+   CHARACTER EYES
+   ========================================================= */
+
+.character-svg [id*="pupil"] {
+  transition:
+    cx 0.12s ease-out,
+    cy 0.12s ease-out,
+    transform 0.12s ease-out;
+}
+
+.character-svg [id*="eye-white"] {
+  transition:
+    transform 0.18s ease-out;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+
+/* =========================================================
+   CUSTOM EXPRESSIONS
+   ========================================================= */
+
+.custom-expression {
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   RIGHT FORM PANEL
+   ========================================================= */
+
+.form-panel {
+  background-color: var(--panel-right-bg);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 45px 50px;
+}
+
+
+/* =========================================================
+   FORM CONTENT
+   ========================================================= */
+
+.form-content {
+  width: 100%;
+
+  max-width: 350px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   SIGN IN / LOG IN SWITCH
+   ========================================================= */
+
+.auth-switch {
+  display: flex;
+
+  width: 100%;
+
+  margin-bottom: 22px;
+
+  border-bottom: 1px solid var(--color-border);
+
+  gap: 24px;
+}
+
+
+.auth-mode {
+  position: relative;
+
+  border: none;
+
+  background: transparent;
+
+  padding: 8px 0 12px;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: var(--color-text-muted);
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease;
+}
+
+
+.auth-mode:hover {
+  color: var(--color-primary);
+}
+
+
+.auth-mode.active {
+  color: var(--color-primary);
+}
+
+
+.auth-mode.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: -1px;
+
+  height: 2px;
+
+  background-color: var(--color-primary);
+
+  border-radius: 2px;
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+.welcome-heading {
+  font-size: 32px;
+
+  font-weight: 700;
+
+  margin-bottom: 8px;
+
+  letter-spacing: -0.8px;
+
+  color: var(--color-primary);
+}
+
+
+.welcome-subtext {
+  font-size: 14px;
+
+  color: var(--color-text-muted);
+
+  margin-bottom: 28px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   FORM INPUT GROUP
+   ========================================================= */
+
+.input-group {
+  margin-bottom: 18px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.input-label {
+  font-size: 13.5px;
+
+  font-weight: 600;
+
+  color: var(--color-text-dark);
+
+  margin-bottom: 4px;
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.form-input {
+  width: 100%;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  padding: 8px 0;
+
+  border: none;
+
+  border-bottom: 1.5px solid var(--color-border);
+
+  background: transparent;
+
+  color: var(--color-text-dark);
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease;
+}
+
+
+.form-input:focus {
+  border-bottom-color:
+    var(--color-primary);
+}
+
+
+.form-input::placeholder {
+  color: #b2b5ba;
+}
+
+
+/* =========================================================
+   PASSWORD
+   ========================================================= */
+
+.password-wrapper {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+}
+
+
+.password-wrapper .form-input {
+  width: 100%;
+
+  padding-right: 32px;
+}
+
+
+/* =========================================================
+   PASSWORD TOGGLE
+   ========================================================= */
+
+.password-toggle {
+  position: absolute;
+
+  right: 0;
+
+  background: none;
+
+  border: none;
+
+  cursor: pointer;
+
+  color: var(--color-text-muted);
+
+  padding: 6px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition:
+    color 0.2s ease;
+
+  outline: none;
+}
+
+
+.password-toggle:hover {
+  color: var(--color-primary);
+}
+
+
+.eye-icon {
+  width: 18px;
+  height: 18px;
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+
+/* =========================================================
+   REMEMBER / FORGOT
+   ========================================================= */
+
+.form-options {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 24px;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   REMEMBER ME
+   ========================================================= */
+
+.remember-me {
+  display: flex;
+
+  align-items: center;
+
+  cursor: pointer;
+
+  user-select: none;
+}
+
+
+.remember-me input {
+  position: absolute;
+
+  opacity: 0;
+
+  cursor: pointer;
+
+  height: 0;
+  width: 0;
+}
+
+
+.custom-checkbox {
+  height: 16px;
+  width: 16px;
+
+  border: 1.5px solid var(--color-border);
+
+  border-radius: 4px;
+
+  margin-right: 8px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition:
+    all 0.25s ease;
+
+  background-color: transparent;
+}
+
+
+.remember-me:hover input~.custom-checkbox {
+  border-color:
+    var(--color-primary);
+}
+
+
+.remember-me input:checked~.custom-checkbox {
+  background-color:
+    var(--color-primary);
+
+  border-color:
+    var(--color-primary);
+}
+
+
+.custom-checkbox svg {
+  width: 10px;
+  height: 10px;
+
+  color: white;
+
+  display: none;
+}
+
+
+.remember-me input:checked~.custom-checkbox svg {
+  display: block;
+}
+
+
+.checkbox-label {
+  color: var(--color-text-muted);
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   FORGOT PASSWORD
+   ========================================================= */
+
+.forgot-link {
+  color: var(--color-text-muted);
+
+  text-decoration: none;
+
+  font-weight: 500;
+
+  transition:
+    color 0.2s ease;
+}
+
+
+.forgot-link:hover {
+  color: var(--color-primary);
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.form-actions {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-bottom: 24px;
+}
+
+
+.btn {
+  font-family: inherit;
+
+  font-size: 14.5px;
+
+  font-weight: 600;
+
+  padding: 12px 24px;
+
+  border-radius: 8px;
+
+  border: none;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  transition:
+    all 0.2s ease;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.btn-primary {
+  background-color:
+    var(--color-primary);
+
+  color: #ffffff;
+}
+
+
+.btn-primary:hover {
+  background-color:
+    #2a2a2a;
+
+  transform: translateY(-1px);
+}
+
+
+.btn-primary:active {
+  transform:
+    translateY(0);
+}
+
+
+.btn-primary:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.65;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   GOOGLE BUTTON
+   ========================================================= */
+
+.btn-secondary {
+  background-color:
+    #eceef1;
+
+  color:
+    var(--color-text-dark);
+}
+
+
+.btn-secondary:hover {
+  background-color:
+    #e2e4e8;
+
+  transform: translateY(-1px);
+}
+
+
+.btn-secondary:active {
+  transform:
+    translateY(0);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.form-footer {
+  text-align: center;
+
+  font-size: 13px;
+
+  color: var(--color-text-muted);
+
+  font-weight: 500;
+}
+
+
+.signup-link {
+  color:
+    var(--color-primary);
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition:
+    opacity 0.2s ease;
+}
+
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   CONFIRM PASSWORD
+   ========================================================= */
+
+.confirm-password-group {
+  display: flex;
+}
+
+
+/* =========================================================
+   ERROR STATE
+   ========================================================= */
+
+.form-input.input-error {
+  border-bottom-color:
+    #e5484d;
+}
+
+
+.form-input.input-success {
+  border-bottom-color:
+    #2da44e;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .login-card {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    max-width: 450px;
+
+    border-radius: 24px;
+  }
+
+
+  .illustration-panel {
+    min-height: 280px;
+  }
+
+
+  .form-panel {
+    padding: 40px 30px;
+  }
+
+
+  .character-container {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  body {
+    padding: 12px;
+  }
+
+
+  .login-card {
+    border-radius: 20px;
+  }
+
+
+  .illustration-panel {
+    min-height: 220px;
+  }
+
+
+  .form-panel {
+    padding: 30px 20px;
+  }
+
+
+  .form-content {
+    max-width: 100%;
+  }
+
+
+  .welcome-heading {
+    font-size: 26px;
+  }
+
+
+  .welcome-subtext {
+    margin-bottom: 24px;
+  }
+
+
+  .auth-switch {
+    gap: 20px;
+  }
+
+
+  .form-options {
+    font-size: 12px;
+  }
+
+
+  .btn {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .illustration-panel {
+    min-height: 190px;
+  }
+
+
+  .form-panel {
+    padding: 25px 16px;
+  }
+
+
+  .welcome-heading {
+    font-size: 24px;
+  }
+
+
+  .form-options {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+
+  .forgot-link {
+    align-self: flex-end;
+  }
+
+}

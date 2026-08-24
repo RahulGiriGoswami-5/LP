@@ -1,0 +1,22 @@
+<svg viewBox="0 0 240 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Large Pink Dome Character -->
+  <g id="pink-dome">
+    <!-- Body -->
+    <path id="body" d="M 10,340 L 10,110 A 110,110 0 0,1 230,110 L 230,340 Z" fill="#ffa9be" />
+    
+    <!-- Eyes -->
+    <g id="eyes">
+      <circle id="eye-white" cx="120" cy="100" r="34" fill="#ffffff" />
+      <circle id="pupil" cx="130" cy="100" r="15" fill="#1a1a1a" />
+    </g>
+    
+    <!-- Mouth -->
+    <g id="mouth">
+      <!-- Open mouth base -->
+      <path id="mouth-bg" d="M 225,150 A 18,18 0 0,1 225,186 Z" fill="#541521" />
+      <!-- Teeth -->
+      <rect id="tooth-1" x="217" y="158" width="5" height="7" rx="1" fill="#ffffff" />
+      <rect id="tooth-2" x="222" y="164" width="5" height="7" rx="1" fill="#ffffff" />
+    </g>
+  </g>
+</svg>

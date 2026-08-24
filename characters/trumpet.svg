@@ -1,0 +1,30 @@
+<svg viewBox="0 0 190 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Trumpet-Headed Pink Character -->
+  <g id="trumpet-character">
+    <!-- Legs -->
+    <g id="legs">
+      <line id="leg-1" x1="120" y1="50" x2="155" y2="370" stroke="#f45b7a" stroke-width="12" stroke-linecap="round" />
+      <line id="leg-2" x1="135" y1="50" x2="185" y2="370" stroke="#f45b7a" stroke-width="12" stroke-linecap="round" />
+    </g>
+    
+    <!-- Head/Body -->
+    <rect id="body" x="5" y="30" width="160" height="48" rx="24" fill="#f45b7a" />
+    
+    <!-- Mouth (Trumpet Snout) -->
+    <ellipse id="mouth" cx="28" cy="54" rx="14" ry="18" fill="#8a1b32" />
+    
+    <!-- Eyes on top of head -->
+    <g id="eyes">
+      <!-- Left Eye -->
+      <g id="eye-left">
+        <circle id="eye-white-left" cx="90" cy="18" r="11" fill="#ffffff" />
+        <circle id="pupil-left" cx="92" cy="18" r="4.5" fill="#1a1a1a" />
+      </g>
+      <!-- Right Eye -->
+      <g id="eye-right">
+        <circle id="eye-white-right" cx="110" cy="18" r="11" fill="#ffffff" />
+        <circle id="pupil-right" cx="112" cy="18" r="4.5" fill="#1a1a1a" />
+      </g>
+    </g>
+  </g>
+</svg>

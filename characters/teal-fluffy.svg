@@ -1,0 +1,46 @@
+<svg viewBox="0 0 140 235" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Teal Fluffy Character -->
+  <g id="teal-fluffy-character">
+    <!-- Legs -->
+    <g id="legs">
+      <rect id="leg-1" x="55" y="130" width="11" height="95" rx="5.5" fill="#52c5c9" />
+      <rect id="leg-2" x="76" y="130" width="11" height="95" rx="5.5" fill="#52c5c9" />
+    </g>
+    
+    <!-- Fluffy Body -->
+    <g id="body" fill="#52c5c9">
+      <circle id="body-core" cx="70" cy="80" r="50" />
+      <!-- Bumps -->
+      <circle id="bump-1" cx="28" cy="80" r="18" />
+      <circle id="bump-2" cx="32" cy="55" r="18" />
+      <circle id="bump-3" cx="45" cy="35" r="18" />
+      <circle id="bump-4" cx="65" cy="26" r="18" />
+      <circle id="bump-5" cx="88" cy="28" r="18" />
+      <circle id="bump-6" cx="106" cy="42" r="18" />
+      <circle id="bump-7" cx="116" cy="64" r="18" />
+      <circle id="bump-8" cx="118" cy="88" r="18" />
+      <circle id="bump-9" cx="108" cy="110" r="18" />
+      <circle id="bump-10" cx="90" cy="128" r="18" />
+      <circle id="bump-11" cx="68" cy="134" r="18" />
+      <circle id="bump-12" cx="46" cy="128" r="18" />
+      <circle id="bump-13" cx="32" cy="108" r="18" />
+    </g>
+    
+    <!-- Eyes -->
+    <g id="eyes">
+      <!-- Left Eye -->
+      <g id="eye-left">
+        <circle id="eye-white-left" cx="60" cy="64" r="12" fill="#ffffff" />
+        <circle id="pupil-left" cx="64" cy="63" r="5" fill="#1a1a1a" />
+      </g>
+      <!-- Right Eye -->
+      <g id="eye-right">
+        <circle id="eye-white-right" cx="82" cy="64" r="12" fill="#ffffff" />
+        <circle id="pupil-right" cx="86" cy="63" r="5" fill="#1a1a1a" />
+      </g>
+    </g>
+    
+    <!-- Mouth -->
+    <ellipse id="mouth" cx="48" cy="96" rx="5" ry="9" fill="#296a6c" />
+  </g>
+</svg>
